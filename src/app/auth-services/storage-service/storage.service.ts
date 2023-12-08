@@ -12,6 +12,17 @@ export class StorageService {
 
   constructor() { }
 
+  static getUserId(): string {
+    const user = this.getUser();
+    if (user == null) {
+      return '';
+    } else {
+      return user.id;
+    }
+
+  }
+
+
   static saveToken(token: string): void {
     window.localStorage.removeItem(TOKEN);
     window.localStorage.setItem(TOKEN, token);
@@ -61,7 +72,7 @@ export class StorageService {
 
   }
 
-  static signout(){
+  static signout() {
     window.localStorage.removeItem(USER);
     window.localStorage.removeItem(TOKEN);
 

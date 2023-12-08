@@ -3,15 +3,26 @@ import { CommonModule } from '@angular/common';
 
 import { CustomerRoutingModule } from './customer-routing.module';
 import { DashboardComponent } from './customer-components/dashboard/dashboard.component';
+import { SiteNgZorroAntdModule } from 'src/app/SiteNgZorroAntdModule';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ViewProductsByCategoryComponent } from './customer-components/view-products-by-category/view-products-by-category.component';
+import { PostReservationComponent } from './customer-components/post-reservation/post-reservation.component';
+import { GetAllReservationsComponent } from './customer-components/get-all-reservations/get-all-reservations.component';
 
 
 @NgModule({
   declarations: [
-    DashboardComponent
+    DashboardComponent,
+    ViewProductsByCategoryComponent,
+    PostReservationComponent,
+    GetAllReservationsComponent
   ],
   imports: [
     CommonModule,
-    CustomerRoutingModule
+    CustomerRoutingModule,
+    SiteNgZorroAntdModule,
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class CustomerModule { }
